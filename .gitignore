@@ -1,0 +1,15 @@
+*~
+*.out
+*.bib
+*.aux
+*.bcf
+*.blg
+*.idx
+*.ilg
+*.ind
+*.log
+*.ptc
+*.toc
+angel
+*.pdf
+Lectures.key
