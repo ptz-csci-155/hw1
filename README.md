@@ -22,6 +22,8 @@ The marks shown are for correctly solving the problems. Correctness is one of th
 
 __Submission__
 
+Each problem specifies the names of the files to be submitted for it. Please make sure your submitted files have the indicated names. Any files in your GitHub repository with these names at the time of the deadline will be considered as your submission.
+
 Deadline: 5p.m. on Feb 18
 
 __Discussion__
