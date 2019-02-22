@@ -22,12 +22,14 @@ The marks shown are for correctly solving the problems. Correctness is one of th
 
 __Submission__
 
+Each problem specifies the names of the files to be submitted for it. Please make sure your submitted files have the indicated names. Any files in your GitHub repository with these names at the time of the deadline will be considered as your submission.
+
 Deadline: 5p.m. on Feb 18
 
 __Discussion__
 
 Please use the following avenues which are listed in decreasing order of preference.
-- the [class forum](https://habibedu.facebook.com/groups/354167592088891/)
+- the [class forum](https://workplace.facebook.com/groups/354167592088891/)
 - discuss with your peers
 - talk to me in our meeting
 - talk to me after class
