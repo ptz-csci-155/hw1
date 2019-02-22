@@ -1,12 +1,17 @@
-var gl;
-var number_of_subdivisions = 4;
+var gl;  // WebGl context.
+var number_of_subdivisions = 5; // in addition to the original square.
 
 window.onload = function init()
 {
     var canvas = document.getElementById( "gl-canvas" );
     
+    // Set up WebGL.
     gl = WebGLUtils.setupWebGL( canvas );
     if ( !gl ) { alert( "WebGL isn't available" ); }
+    
+    // --- Configure WebGL
+    gl.viewport( 0, 0, canvas.width, canvas.height );
+    gl.clearColor( 1.0, 1.0, 1.0, 1.0 );
 
     // --- Generate points.
     // Generate first square.
@@ -25,10 +30,6 @@ window.onload = function init()
 	vertices = vertices.concat(new_square);
 	old_square = new_square;
     }
-    
-    // --- Configure WebGL
-    gl.viewport( 0, 0, canvas.width, canvas.height );
-    gl.clearColor( 1.0, 1.0, 1.0, 1.0 );
     
     // --- Load shaders and initialize attribute buffers
     var program = initShaders( gl, "vertex-shader", "fragment-shader" );
@@ -49,7 +50,7 @@ window.onload = function init()
 
 function subdivide_square(square) {
     /* The subdivided square is the old square translated and with edge
-       midpoints added.
+       midpoints added and projected..
     */
     //  Compute infomration of translaton and of the new circle.
     var r = 1 / (number_of_subdivisions+1);  // radius
@@ -74,7 +75,6 @@ function subdivide_square(square) {
     }
     return new_square;
 }
-
 
 function render() {
     gl.clear( gl.COLOR_BUFFER_BIT );

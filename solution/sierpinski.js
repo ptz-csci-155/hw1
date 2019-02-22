@@ -34,9 +34,11 @@ window.onload = function init()
 };
 
 function sierpinski_triangle(corners, depth) {
+    // No subdivision for depth of 0 - return the received points.
     if (depth == 0) {
 	return corners;
     }
+    // Divide the triangle into 4 triangles and recurse for each.
     var vertices = []
     var mid01 = mix(corners[0], corners[1], .5);
     var mid02 = mix(corners[0], corners[2], .5);

@@ -1,7 +1,10 @@
 function map_point(P, Q, A, B, X) {
+    /* Assumes that A and B are of the same type. */
     var alpha;
     if (P.length && Q.length && X.length &&
 	P.length == Q.length && P.length == X.length) {
+	// P, Q, and X are vectors of the same type - alpha is the ratio vector
+	// lengths.
 	var PX = length(subtract(X,P));
 	var PQ = length(subtract(Q,P));
 	alpha = PX / PQ;

@@ -2,33 +2,39 @@
 <html>
 <head>
 <script id="vertex-shader" type="x-shader/x-vertex">
-attribute vec4 aPosition;
-attribute vec3 aColor;
+  attribute vec4 vPosition;
+  attribute vec4 vColor;
   
-varying vec3 vColor;
+  varying vec4 fColor;
 
-void main() {
-    vColor = aColor;
-    gl_Position = aPosition;
-}
+  void
+  main()
+  {
+      // Pass through shahder. Points are 1 pixel large so they do not overlap.
+      gl_Position = vPosition;
+      gl_PointSize = 1.0;
+      fColor = vColor;
+  }
 </script>
 
 <script id="fragment-shader" type="x-shader/x-fragment">
-precision mediump float;
-
-varying vec3 vColor;
+  precision mediump float;
   
-void
-main() {
-    gl_FragColor = vec4(vColor,1);
-}
+  varying vec4 fColor;
+  
+  void
+  main()
+  {
+      // Pass through.
+      gl_FragColor = fColor;
+  }
 </script>
 
 <script type="text/javascript" src="Common/webgl-utils.js"></script>
 <script type="text/javascript" src="Common/initShaders.js"></script>
 <script type="text/javascript" src="Common/MV.js"></script>
 <script type="text/javascript" src="map.js"></script>
-<script type="text/javascript" src="test.js"></script>
+<script type="text/javascript" src="mandelbrot.js"></script>
 </head>
 
 <body>

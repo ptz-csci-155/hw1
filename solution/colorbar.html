@@ -7,12 +7,13 @@
   
   varying vec4 fColor;
 
-void
-main()
-{
-    gl_Position = vPosition;
-    fColor = vColor;
-}
+  void
+  main()
+  {
+      // Pass through shader.
+      gl_Position = vPosition;
+      fColor = vColor;
+  }
 </script>
 
 <script id="fragment-shader" type="x-shader/x-fragment">
@@ -23,6 +24,7 @@ main()
   void
   main()
   {
+      // Pass through shader.
       gl_FragColor = fColor;
   }
 </script>
@@ -30,7 +32,8 @@ main()
 <script type="text/javascript" src="Common/webgl-utils.js"></script>
 <script type="text/javascript" src="Common/initShaders.js"></script>
 <script type="text/javascript" src="Common/MV.js"></script>
-<script type="text/javascript" src="maxwell.js"></script>
+<script type="text/javascript" src="map.js"></script>
+<script type="text/javascript" src="colorbar.js"></script>
 </head>
 
 <body>

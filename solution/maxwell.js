@@ -1,9 +1,6 @@
 
 var gl;
 
-// onload = myFunction;
-
-
 window.onload = function init()
 {
     var canvas = document.getElementById( "gl-canvas" );
